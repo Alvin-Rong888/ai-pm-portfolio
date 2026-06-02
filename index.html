@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="张殊荣，AI 产品经理个人网站。聚焦 LLM、Agent、RAG、工程背景与海外 B2B 解决方案。"
+    />
+    <title>张殊荣 | AI 产品经理</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header" aria-label="主导航">
+      <nav class="nav-shell">
+        <a class="brand" href="#hero" aria-label="返回首页">张殊荣</a>
+        <div class="nav-links" id="navLinks">
+          <a href="#hero" class="nav-link is-active">首页</a>
+          <a href="#projects" class="nav-link">作品集</a>
+          <a href="#timeline" class="nav-link">时间线</a>
+          <a href="#capabilities" class="nav-link">能力</a>
+          <a href="#tools" class="nav-link">工具链</a>
+          <a href="#contact" class="nav-link">联系</a>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero section" id="hero" aria-labelledby="hero-title">
+        <div class="hero-copy">
+          <p class="eyebrow">AI Product Manager</p>
+          <h1 id="hero-title">张殊荣</h1>
+          <p class="hero-role">
+            <span>AI 产品经理</span>
+            <span class="role-divider" aria-hidden="true">·</span>
+            <span>LLM / Agent / AI 应用方向</span>
+          </p>
+          <p class="hero-summary">
+            具备华为产品竞分、开发运维和解决方案复合背景，熟悉企业知识库、AI 应用与 Agent
+            工作流设计。能够从业务场景抽象、需求设计、Prompt / Workflow 搭建到工程落地推进完整实践。
+          </p>
+          <div class="hero-meta" aria-label="基本信息">
+            <span>中南大学</span>
+            <span>数据科学与大数据技术（本科）</span>
+            <span>深圳</span>
+          </div>
+          <div class="hero-tags" aria-label="核心标签">
+            <span>LLM / Agent / RAG</span>
+            <span>工程背景</span>
+            <span>海外 B2B 方案</span>
+          </div>
+          <div class="hero-actions">
+            <a class="primary-link" href="#projects">查看作品集</a>
+            <a class="secondary-link" href="mailto:1020464101@qq.com">联系我</a>
+          </div>
+        </div>
+
+        <figure class="hero-visual" aria-label="个人照片占位">
+          <div class="profile-frame">
+            <img id="profileImage" src="assets/profile.jpg" alt="张殊荣个人照片" hidden />
+            <div class="profile-placeholder" id="profilePlaceholder">
+              <span class="placeholder-title">Profile Photo</span>
+              <span class="placeholder-path">请放入 assets/profile.jpg</span>
+            </div>
+          </div>
+          <figcaption>AI 产品经理候选人 | 工程、方案、竞分产品复合背景</figcaption>
+        </figure>
+      </section>
+
+      <section class="section portfolio-section" id="projects" aria-labelledby="projects-title">
+        <div class="section-heading">
+          <p class="eyebrow">Portfolio</p>
+          <h2 id="projects-title">作品集</h2>
+          <p>
+            以企业级 AI 场景为可信度起点，以完整产品落地和 AI 应用实验补足可展示能力。
+          </p>
+        </div>
+        <div class="portfolio-stack" id="projectsList" aria-live="polite"></div>
+      </section>
+
+      <section class="section" id="timeline" aria-labelledby="timeline-title">
+        <div class="section-heading">
+          <p class="eyebrow">Experience</p>
+          <h2 id="timeline-title">职业时间线</h2>
+          <p>从后端开发、SRE、数据治理，到海外解决方案与竞分产品，形成产品经理所需的复合视角。</p>
+        </div>
+        <div class="timeline" id="timelineList"></div>
+      </section>
+
+      <section class="section" id="capabilities" aria-labelledby="capabilities-title">
+        <div class="section-heading">
+          <p class="eyebrow">Capability</p>
+          <h2 id="capabilities-title">能力仪表盘</h2>
+          <p>不用虚构分数，用项目和经历里的证据呈现能力结构。</p>
+        </div>
+        <div class="capability-grid" id="capabilityGrid"></div>
+      </section>
+
+      <section class="section" id="tools" aria-labelledby="tools-title">
+        <div class="section-heading">
+          <p class="eyebrow">Stack</p>
+          <h2 id="tools-title">技术栈与工具链</h2>
+          <p>覆盖 AI 应用搭建、产品设计、工程实现和交付运维。</p>
+        </div>
+        <div class="tool-groups" id="toolGroups"></div>
+      </section>
+
+      <section class="section contact-section" id="contact" aria-labelledby="contact-title">
+        <div class="section-heading">
+          <p class="eyebrow">Contact</p>
+          <h2 id="contact-title">简历下载与联系方式</h2>
+          <p>公开联系以邮箱为主。PDF 简历文件放入指定路径后，下载按钮会自动启用。</p>
+        </div>
+        <div class="contact-panel">
+          <div class="contact-copy">
+            <h3>期待 AI 产品经理相关机会</h3>
+            <p>
+              关注 LLM / Agent / RAG、企业知识库、AI 应用工作流、海外 B2B 场景与工程落地。
+            </p>
+            <div class="contact-actions">
+              <a class="primary-link" href="mailto:1020464101@qq.com">发送邮件</a>
+              <a
+                class="secondary-link is-disabled"
+                id="resumeDownload"
+                href="assets/resume.pdf"
+                aria-disabled="true"
+                tabindex="-1"
+              >
+                PDF 简历待放入
+              </a>
+            </div>
+          </div>
+          <div class="contact-details" aria-label="联系方式与素材填充说明">
+            <div>
+              <span class="detail-label">邮箱</span>
+              <a href="mailto:1020464101@qq.com">1020464101@qq.com</a>
+            </div>
+            <div>
+              <span class="detail-label">PDF 简历</span>
+              <span>放入 assets/resume.pdf 后自动启用下载</span>
+            </div>
+            <div>
+              <span class="detail-label">作品素材</span>
+              <span>截图、视频、头像统一放入 assets/ 目录</span>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>© 2026 张殊荣. Built as a clean, migration-ready static single page.</p>
+    </footer>
+
+    <script src="script.js?v=20260530-jpg-assets"></script>
+  </body>
+</html>
