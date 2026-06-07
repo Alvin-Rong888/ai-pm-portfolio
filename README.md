@@ -1,6 +1,6 @@
 # ai-pm-portfolio
 
-张殊荣 AI 产品经理介绍页。
+Alvin AI 产品经理介绍页。
 
 这是一个静态动态单页 v1，使用 `HTML + CSS + JS` 实现，内容集中在 `script.js` 的数据对象中，后续可以平滑迁移到 React/Vite 组件结构。
 

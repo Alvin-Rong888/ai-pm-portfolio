@@ -7,7 +7,7 @@ const siteData = {
       title: "三朵云 AI 竞争分析能力",
       period: "2024.12 - 2025.10 | 华为无线解决方案销售部",
       summary:
-        "协助构建内部平台“三朵云”AI 竞争分析能力，参与竞分知识库建设、竞分语料归类、RAG 应用效果验证与专有模型能力测试。",
+        "协助构建“三朵云”AI 竞争分析知识库，参与竞分知识库建设、竞分语料归类、RAG 应用效果验证与专有模型能力测试。",
       tags: ["RAG", "企业知识库", "竞分产品", "语料治理", "Badcase 反馈"],
       bullets: [
         "参与竞分知识库搭建法律风险讨论，负责竞分材料、产品选型案例、历史项目经验等非结构化知识的梳理与归类。",
@@ -68,16 +68,10 @@ const siteData = {
   ],
   timeline: [
     {
-      date: "2024.12 - 2025.10",
-      role: "产品经理（竞分）",
+      date: "2023.10 - 2025.10",
+      role: "产品经理",
       org: "华为技术有限公司 | 无线解决方案销售部",
-      body: "支撑全球各代表处无线产品方案竞争分析，协助构建“三朵云”AI 竞争分析能力，参与 Airtel 总部 5 年框架合同竞争分析与产品选型。"
-    },
-    {
-      date: "2023.10 - 2024.11",
-      role: "存量拓展工程师",
-      org: "华为技术有限公司 | 无线存量拓展部",
-      body: "设计全场景解决方案体系，支撑喀麦隆代表处五国网络存量扩展；主导乍得 Airtel & Moov 全场景网络方案规划，支撑客户拜访与方案落地。"
+      body: "支撑全球各代表处无线产品方案竞争分析，设计全场景解决方案体系并支撑 C代表处五国无线网络存量扩展；协助构建“三朵云”AI 竞争分析知识库，参与 A运营商总部 5 年框架合同竞争分析、产品选型、标前红蓝军演练与竞争分析材料输出，并主导乍得 A运营商 & M运营商 全场景网络方案规划和客户拜访。"
     },
     {
       date: "2023.03 - 2023.10",
@@ -113,7 +107,7 @@ const siteData = {
     },
     {
       title: "海外沟通",
-      body: "支撑喀麦隆代表处五国网络存量扩展，参与乍得客户拜访和 Airtel 小巴展宣讲，具备良好英文沟通能力。"
+      body: "支撑 C代表处五国网络存量扩展，参与乍得客户拜访和 A运营商小巴展宣讲，具备良好英文沟通能力。"
     }
   ],
   tools: [
@@ -187,7 +181,7 @@ function projectTemplate(project) {
 function enterpriseAside(project) {
   return `
     <div class="evidence-panel">
-      <p class="evidence-title">内部项目展示方式</p>
+      <p class="evidence-title">面试官可关注的能力证据</p>
       <div class="evidence-grid">
         ${project.evidence
           .map(
@@ -207,7 +201,7 @@ function enterpriseAside(project) {
 function flagshipAside(project) {
   return `
     <div class="screen-panel">
-      <p class="screen-title">前端展示位</p>
+      <p class="screen-title">产品界面展示</p>
       <div class="screen-grid">
         ${project.screens.map(screenSlot).join("")}
       </div>
@@ -343,7 +337,7 @@ async function hydrateOptionalAssets() {
     resume.classList.remove("is-disabled");
     resume.removeAttribute("aria-disabled");
     resume.removeAttribute("tabindex");
-    resume.setAttribute("download", "张殊荣_AI产品经理.pdf");
+    resume.setAttribute("download", "Alvin_AI产品经理.pdf");
     resume.textContent = "下载 PDF 简历";
   }
 }
