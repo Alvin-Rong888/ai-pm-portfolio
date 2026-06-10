@@ -54,6 +54,7 @@ const siteData = {
       tags: ["Figma", "Claude Code", "OpenClaw", "Agent", "Vibe Coding", "DevOps"],
       bullets: [
         "调研市面番茄钟程序，发现部分产品排版混乱、广告多，且倒计时结束会中断专注或无法记录心流时长。",
+        "融入AI智能建议，帮助用户观察自身专注习惯，培养更健康的工作/学习习惯。",
         "用 vibe coding 方式开发前后端分离的小程序，使用 Figma AI 进行前端页面设计，Claude Code 进行前后端代码开发。",
         "在微信公众平台部署前端代码，云服务器部署后端代码，申请域名并使用 Nginx 打通前后端，使用 pm2 进行后台程序管理。",
         "引入开发侧 Claude Code Skill、GitHub webhook 与云服务器 OpenClaw Agent，形成智能化自动化部署架构。"
