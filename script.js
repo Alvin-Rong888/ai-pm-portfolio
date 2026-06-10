@@ -7,7 +7,7 @@ const siteData = {
       title: "三朵云 AI 竞争分析能力",
       period: "2024.12 - 2025.10 | 华为无线解决方案销售部",
       summary:
-        "协助构建“三朵云”AI 竞争分析知识库，参与竞分知识库建设、竞分语料归类、RAG 应用效果验证与专有模型能力测试。",
+        "构建“三朵云”AI 竞争分析知识库，参与竞分知识库建设、竞分语料归类、RAG 应用效果验证与专有模型能力测试。",
       tags: ["RAG", "企业知识库", "竞分产品", "语料治理", "Badcase 反馈"],
       bullets: [
         "参与竞分知识库搭建法律风险讨论，负责竞分材料、产品选型案例、历史项目经验等非结构化知识的梳理与归类。",
@@ -15,11 +15,32 @@ const siteData = {
         "参与专有模型竞分能力测试，基于测试集验证回答准确率、案例召回质量与知识时效性。",
         "设计点赞 / 点踩与 badcase 反馈机制，并协助知识库权限管理讨论，推动竞分经验沉淀标准化。"
       ],
-      evidence: [
-        ["业务场景", "全球代表处无线产品方案竞争分析与产品选型。"],
-        ["AI 机制", "RAG 检索验证、知识标签、问答场景与专有模型测试。"],
-        ["治理问题", "法律风险、权限管理、语料归类、知识时效性。"],
-        ["产品闭环", "点赞 / 点踩、badcase 反馈、专家经验沉淀。"]
+      businessFlow: {
+        title: "业务流程：一线 - 知识库 - 竞分组",
+        metric: "常规竞分信息获取时效从 D+1 提升至 D+0",
+        lanes: [
+          {
+            role: "一线 / 代表处",
+            steps: ["提出竞分问题", "自助查询资料", "反馈 badcase / 新需求"]
+          },
+          {
+            role: "竞分知识库",
+            steps: ["权限校验", "RAG 检索与生成", "返回答案与引用"]
+          },
+          {
+            role: "竞分组",
+            steps: ["知识治理与上架", "评估反馈", "更新语料与白名单"]
+          }
+        ]
+      },
+      ragPipeline: [
+        { title: "识别场景", points: ["高重复支撑", "D+1 到 D+0"] },
+        { title: "知识治理", points: ["合规来源", "术语词表 / 表格事实"] },
+        { title: "Chunk 切分", points: ["标题分块", "Small-to-Big"] },
+        { title: "混合索引", points: ["Hybrid Search", "元数据 / rerank"] },
+        { title: "答案生成", points: ["证据回答", "引用溯源"] },
+        { title: "评估反馈", points: ["测试集评级", "badcase 回溯"] },
+        { title: "白名单上线", points: ["SR / VP / 代表", "权限开通"] }
       ]
     },
     {
@@ -43,7 +64,12 @@ const siteData = {
         { label: "数据统计", path: "assets/focus-timer-03.jpg" }
       ],
       flow: ["Claude Code Skill", "GitHub webhook", "OpenClaw Agent", "风险判断", "自动部署"],
-      metric: "部署时间从约 3min 优化至 10s"
+      metric: "部署时间从约 3min 优化至 10s",
+      qrcode: {
+        path: "assets/focus-timer-qrcode.jpg",
+        title: "微信扫码体验",
+        hint: "扫码进入「心流番茄钟」小程序，体验极简计时与心流记录。"
+      }
     },
     {
       id: "coder-treehole",
@@ -60,17 +86,49 @@ const siteData = {
         "针对极端情绪场景进行正向引导和限制，当用户出现自残意向时，通过 Function Calling 提示附近正规心理咨询地点进行介入。",
         "邀请程序员好友测试，根据真实问题生成测试集，并基于反馈结果进行 prompt 迭代和问题闭环。"
       ],
+      researchInsight: {
+        title: "职场吐槽是第二大类高频问题",
+        body:
+          "调研26年3-4月数据显示，职场向吐槽在程序员树洞话题中仅次于情感向；但相比情感陪伴类服务，职场吐槽场景的针对性支持明显不足。",
+        takeaways: [
+          ["问题排序", "第二大类", "职场向吐槽仅次于情感向。"],
+          ["机会判断", "支持不足", "针对职场吐槽的配套服务明显少于情感向。"]
+        ]
+      },
+      research: [
+        {
+          platform: "稀土掘金",
+          items: [
+            ["情感向", 38],
+            ["职场向", 24],
+            ["经济向", 20],
+            ["生活向", 13],
+            ["技术向", 5]
+          ]
+        },
+        {
+          platform: "小红书",
+          items: [
+            ["情感向", 45],
+            ["职场向", 21],
+            ["生活向", 13],
+            ["经济向", 11],
+            ["技术向", 10]
+          ]
+        }
+      ],
       video: {
         path: "assets/coder-treehole-demo.mp4",
         poster: "assets/coder-treehole-poster.jpg"
-      }
+      },
+      experienceUrl: "https://www.coze.cn/store/agent/7616294520539938851?bot_id=true"
     }
   ],
   timeline: [
     {
       date: "2023.10 - 2025.10",
       role: "产品经理",
-      org: "华为技术有限公司 | 无线解决方案销售部",
+      org: "华为技术有限公司 | 无线解决方案",
       body: "支撑全球各代表处无线产品方案竞争分析，设计全场景解决方案体系并支撑 C代表处五国无线网络存量扩展；协助构建“三朵云”AI 竞争分析知识库，参与 A运营商总部 5 年框架合同竞争分析、产品选型、标前红蓝军演练与竞争分析材料输出，并主导乍得 A运营商 & M运营商 全场景网络方案规划和客户拜访。"
     },
     {
@@ -152,12 +210,18 @@ function renderProjects() {
 }
 
 function projectTemplate(project) {
+  if (project.id === "three-clouds") {
+    return enterpriseProjectTemplate(project);
+  }
+
+  if (project.id === "coder-treehole") {
+    return treeholeProjectTemplate(project);
+  }
+
   const aside =
-    project.variant === "enterprise"
-      ? enterpriseAside(project)
-      : project.variant === "flagship"
-        ? flagshipAside(project)
-        : videoAside(project);
+    project.variant === "flagship"
+      ? flagshipAside(project)
+      : videoAside(project);
 
   return `
     <article class="project-card is-${project.variant} reveal" id="${project.id}">
@@ -178,23 +242,177 @@ function projectTemplate(project) {
   `;
 }
 
-function enterpriseAside(project) {
+function enterpriseProjectTemplate(project) {
   return `
-    <div class="evidence-panel">
-      <p class="evidence-title">面试官可关注的能力证据</p>
-      <div class="evidence-grid">
-        ${project.evidence
+    <article class="project-card is-${project.variant} reveal" id="${project.id}">
+      <div class="project-inner enterprise-inner">
+        <div class="project-main enterprise-main">
+          <p class="project-kicker">${escapeHtml(project.kicker)}</p>
+          <h3>${escapeHtml(project.title)}</h3>
+          <p class="project-period">${escapeHtml(project.period)}</p>
+          <p class="project-summary">${escapeHtml(project.summary)}</p>
+          <div class="project-tags">${chipList(project.tags)}</div>
+          <ul class="project-list">
+            ${project.bullets.map((item) => `<li>${escapeHtml(item)}</li>`).join("")}
+          </ul>
+        </div>
+        <aside class="enterprise-business">
+          ${businessFlowDiagram(project.businessFlow)}
+        </aside>
+        <div class="enterprise-rag">
+          ${ragPipelineDiagram(project.ragPipeline)}
+        </div>
+      </div>
+    </article>
+  `;
+}
+
+function treeholeProjectTemplate(project) {
+  return `
+    <article class="project-card is-${project.variant} is-treehole reveal" id="${project.id}">
+      <div class="project-inner treehole-inner">
+        <div class="treehole-intro">
+          <p class="project-kicker">${escapeHtml(project.kicker)}</p>
+          <h3>${escapeHtml(project.title)}</h3>
+          <p class="project-period">${escapeHtml(project.period)}</p>
+          <p class="project-summary">${escapeHtml(project.summary)}</p>
+          <div class="project-tags">${chipList(project.tags)}</div>
+        </div>
+        ${researchPanel(project)}
+        <aside class="treehole-media">
+          ${videoAside(project)}
+        </aside>
+        <div class="treehole-workflow">
+          ${cozeExperiencePanel(project)}
+          <p class="workflow-title">设计与验证路径</p>
+          <ul class="project-list">
+            ${project.bullets.map((item) => `<li>${escapeHtml(item)}</li>`).join("")}
+          </ul>
+        </div>
+      </div>
+    </article>
+  `;
+}
+
+function researchPanel(project) {
+  return `
+    <section class="research-panel">
+      <p class="research-kicker">Research Insight</p>
+      <h4>${escapeHtml(project.researchInsight.title)}</h4>
+      <p class="research-summary">${escapeHtml(project.researchInsight.body)}</p>
+      <div class="research-platforms">
+        ${project.research.map(researchPlatformTemplate).join("")}
+      </div>
+      <div class="research-takeaways">
+        ${project.researchInsight.takeaways
           .map(
-            ([title, body]) => `
-              <div class="evidence-item">
-                <strong>${escapeHtml(title)}</strong>
-                <span>${escapeHtml(body)}</span>
+            ([label, value, text]) => `
+              <div class="research-takeaway">
+                <span>${escapeHtml(label)}</span>
+                <strong>${escapeHtml(value)}</strong>
+                <p>${escapeHtml(text)}</p>
+              </div>
+            `
+          )
+          .join("")}
+      </div>
+    </section>
+  `;
+}
+
+function researchPlatformTemplate(platform) {
+  return `
+    <div class="research-platform">
+      <p class="research-platform-title">${escapeHtml(platform.platform)}</p>
+      <div class="research-bars">
+        ${platform.items
+          .map(
+            ([label, value]) => `
+              <div class="research-row ${label === "职场向" ? "is-highlight" : ""}">
+                <span class="research-label">${escapeHtml(label)}</span>
+                <span class="research-track" aria-hidden="true">
+                  <span class="research-fill" style="width: ${Number(value)}%"></span>
+                </span>
+                <strong>${Number(value)}%</strong>
               </div>
             `
           )
           .join("")}
       </div>
     </div>
+  `;
+}
+
+function cozeExperiencePanel(project) {
+  return `
+    <div class="coze-entry-panel">
+      <div>
+        <p class="coze-entry-title">Coze 在线体验</p>
+        <p class="coze-entry-text">打开智能体，直接体验“情绪识别 → 场景分类 → 回复策略生成”的对话链路。</p>
+      </div>
+      <a class="primary-link coze-entry-link" href="${escapeHtml(project.experienceUrl)}" target="_blank" rel="noopener noreferrer">
+        体验 Coze 智能体
+      </a>
+    </div>
+  `;
+}
+
+function businessFlowDiagram(flow) {
+  return `
+    <section class="enterprise-diagram business-flow-diagram reveal">
+      <div class="diagram-heading">
+        <p class="diagram-kicker">Business Flow</p>
+        <h4>${escapeHtml(flow.title)}</h4>
+      </div>
+      <div class="swimlane-grid">
+        ${flow.lanes
+          .map(
+            (lane) => `
+              <div class="swimlane">
+                <p class="swimlane-title">${escapeHtml(lane.role)}</p>
+                <div class="swimlane-steps">
+                  ${lane.steps
+                    .map(
+                      (step, index) => `
+                        <div class="swimlane-step">
+                          <span>${String(index + 1).padStart(2, "0")}</span>
+                          <strong>${escapeHtml(step)}</strong>
+                        </div>
+                      `
+                    )
+                    .join("")}
+                </div>
+              </div>
+            `
+          )
+          .join("")}
+      </div>
+      <p class="diagram-metric">${escapeHtml(flow.metric)}</p>
+    </section>
+  `;
+}
+
+function ragPipelineDiagram(steps) {
+  return `
+    <section class="enterprise-diagram rag-pipeline-diagram reveal">
+      <div class="diagram-heading">
+        <p class="diagram-kicker">RAG Pipeline</p>
+        <h4>RAG 搭建主流程</h4>
+      </div>
+      <div class="rag-steps">
+        ${steps
+          .map(
+            (step, index) => `
+              <div class="rag-step">
+                <span class="rag-index">${String(index + 1).padStart(2, "0")}</span>
+                <strong>${escapeHtml(step.title)}</strong>
+                <p>${step.points.map(escapeHtml).join(" / ")}</p>
+              </div>
+            `
+          )
+          .join("")}
+      </div>
+    </section>
   `;
 }
 
@@ -206,6 +424,7 @@ function flagshipAside(project) {
         ${project.screens.map(screenSlot).join("")}
       </div>
     </div>
+    ${project.qrcode ? qrPanel(project.qrcode) : ""}
     <div class="flow-panel reveal">
       <p class="flow-title">一键部署链路</p>
       <div class="deploy-flow">
@@ -225,6 +444,24 @@ function flagshipAside(project) {
   `;
 }
 
+function qrPanel(qrcode) {
+  return `
+    <div class="qr-panel reveal" data-qr-slot="${escapeHtml(qrcode.path)}">
+      <div class="qr-shot">
+        <img src="${escapeHtml(qrcode.path)}" alt="${escapeHtml(qrcode.title)}" hidden />
+        <div class="qr-placeholder">
+          <strong>小程序二维码</strong>
+          <span>${escapeHtml(qrcode.path)}</span>
+        </div>
+      </div>
+      <div class="qr-copy">
+        <p class="qr-title">${escapeHtml(qrcode.title)}</p>
+        <p class="qr-hint">${escapeHtml(qrcode.hint)}</p>
+      </div>
+    </div>
+  `;
+}
+
 function screenSlot(screen) {
   return `
     <div class="phone-shot" data-image-slot="${escapeHtml(screen.path)}">
@@ -240,7 +477,7 @@ function screenSlot(screen) {
 function videoAside(project) {
   return `
     <div class="video-panel">
-      <p class="video-title">产品演示视频位</p>
+      <p class="video-title">产品演示视频</p>
       <div class="video-frame" data-video-slot="${escapeHtml(project.video.path)}">
         <video src="${escapeHtml(project.video.path)}" poster="${escapeHtml(project.video.poster)}" controls hidden></video>
         <div class="video-placeholder">
@@ -323,6 +560,15 @@ async function hydrateOptionalAssets() {
     }
   }
 
+  for (const slot of qsa("[data-qr-slot]")) {
+    const img = qs("img", slot);
+    const placeholder = qs(".qr-placeholder", slot);
+    if (await assetExists(img.getAttribute("src"))) {
+      img.hidden = false;
+      if (placeholder) placeholder.hidden = true;
+    }
+  }
+
   for (const slot of qsa("[data-video-slot]")) {
     const video = qs("video", slot);
     const placeholder = qs(".video-placeholder", slot);
@@ -330,15 +576,6 @@ async function hydrateOptionalAssets() {
       video.hidden = false;
       placeholder.hidden = true;
     }
-  }
-
-  const resume = qs("#resumeDownload");
-  if (await assetExists(resume.getAttribute("href"))) {
-    resume.classList.remove("is-disabled");
-    resume.removeAttribute("aria-disabled");
-    resume.removeAttribute("tabindex");
-    resume.setAttribute("download", "Alvin_AI产品经理.pdf");
-    resume.textContent = "下载 PDF 简历";
   }
 }
 
